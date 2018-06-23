@@ -199,7 +199,7 @@ switch (expression){
 
 * 函数在执行return语句后停止并立即退出，之后的代码都不会被执行。
 * return后可以不带任何返回值，此时返回结果为undefined。
-* 参数：可以通过arguments访问函数的参数，arguments为**类数组对象**，可以通过arguments\[index\]访问值也可以获取arguments.length属性但是无法使用push方法（可以使用var newarg = \[...arguments\]转为数组）
+* 参数：可以通过arguments访问函数的参数，arguments为**类数组对象**，可以通过arguments\[index\]访问值也可以获取arguments.length属性但是无法使用push方法（可以使用var newarg = \[...arguments\]转为数组）,注意：arguments对象可以与命名参数一起使用。
 
 ```
 //一下两种方式都是可以的
@@ -211,6 +211,10 @@ function sayHi(){
     alert("Hello"+arguments[0]+arguments[1])
 }
 ```
+
+      没有赋值的参数默认为undefined
+
+* 如果定义了两个名字相同的函数，后面的函数会覆盖前面的函数。
 
 
 
