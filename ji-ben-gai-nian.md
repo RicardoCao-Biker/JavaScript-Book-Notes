@@ -138,6 +138,7 @@ parseFloat("22.34.5") //22.34
   * 减法 ： — 
 
 * 关系操作符 &lt; &lt;=  &gt;= &gt;
+
   * 如果两个操作数都是字符串则比较字符串对应的字符编码值
   * 如果其中一个是数值，则将另一个操作数转为数值并比较
 
@@ -164,7 +165,52 @@ null == 0 //false
 
 ### 语句
 
+* if语句
+* do-while语句：在条件表达式求值之代码会执行一次
 
+```
+var i=o;
+do{
+    i+=2;
+}while(i<10);
+```
+
+* while语句：while\(expression\) statement
+* for语句
+* for-in语句： for\(property in expression\) statement   建议在for-in之前先判断对象值是否为null或undefined
+* label语句： label:statement 可以被break和continue引用，以达到退出多层循环的目的。
+* break和continue语句，break会立即退出循环，强制执行循环后面的语句。continue也立即退出循环，但是会从循环顶部继续执行。
+* with语句：将代码作用域设置到一个特定的对象中，由于with语句会导致性能下降，不建议使用。
+* switch语句：
+
+```
+switch (expression){
+    case value:statement
+        break;
+    case value:statement
+        break;
+    case value:statement
+        break;
+    default: statement
+}
+```
+
+### 函数
+
+* 函数在执行return语句后停止并立即退出，之后的代码都不会被执行。
+* return后可以不带任何返回值，此时返回结果为undefined。
+* 参数：可以通过arguments访问函数的参数，arguments为**类数组对象**，可以通过arguments\[index\]访问值也可以获取arguments.length属性但是无法使用push方法（可以使用var newarg = \[...arguments\]转为数组）
+
+```
+//一下两种方式都是可以的
+function sayHi(name,message){
+    alert("Hello"+name+message)
+}
+
+function sayHi(){
+    alert("Hello"+arguments[0]+arguments[1])
+}
+```
 
 
 
