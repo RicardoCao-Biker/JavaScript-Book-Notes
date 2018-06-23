@@ -34,5 +34,9 @@ setName(person);
 alert(person.name)  //"rico",如果在函数内部重写object，这个变量引用的就是一个局部对象的，会在函数执行后销毁。
 ```
 
+* 检测类型
+  * 基本类型，使用typeof
+  * 引用类型，使用instanceof
+
 
 
