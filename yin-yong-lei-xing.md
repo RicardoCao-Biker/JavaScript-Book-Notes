@@ -179,7 +179,7 @@ var result = stop - start ; //时间差毫秒数
     * lastIndexOf\(\)
 * * trim\(\) 创建一个字符串副本，并删除前置和后缀的所有空格。
   * 大小写转换toLowerCase\(\) /toUpperCase.
-  * 
+  * match\(\)匹配   text.match\(pattern\)
 
 
 
