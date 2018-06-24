@@ -179,7 +179,21 @@ var result = stop - start ; //时间差毫秒数
     * lastIndexOf\(\)
 * * trim\(\) 创建一个字符串副本，并删除前置和后缀的所有空格。
   * 大小写转换toLowerCase\(\) /toUpperCase.
-  * match\(\)匹配   text.match\(pattern\)
+  * match\(\)匹配   text.match\(pattern\)    text.search\(pattern\)
+  * replace\(\)方法接受两个参数，第一个参数为字符串或正则表达式，如果为字符串则只会替换第一个字符串，第二个参数可以为字符串或函数。等
+  *  split\(\),第一个参数为指定的分隔符，该方法会按照分隔符最字符串进行分隔，并依次push进数组中。
+
+#### 单体内置对象
+
+* eval\(\) 类似一个ES解析器，只接受一各参数，即要执行的ES代码字符串，eval中声明的变量不会提升，只有在eval执行时才会创建。
+* window对象，在全局中声明的所有变量和函数，都成为了window对象的属性。
+* Math对象
+  * Math.max\(arg1,arg2...\)
+  * Math.min\(arg1,arg2...\)
+  * Math.ceil\(\)向上舍入
+  * Math.floor\(\)向下舍入
+  * Math.round\(\)四舍五入
+  * Math.random\(\)返回0-1的随机数
 
 
 
