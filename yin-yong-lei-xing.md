@@ -107,6 +107,7 @@ values.sort(compare);
   * filter\(\)   var newarr = arr.filter\(function\(item,index,array\){return item &gt; 2}\)
 
   * forEach\(\)   arr.forEach\(function\(item,index,array\){do something}\)    //没有返回值
+
   * map\(\)   var newarr = arr.map\(function\(item,index,array\){return item\*2}\)
 
 * 归并方法：
@@ -142,6 +143,13 @@ var result = stop - start ; //时间差毫秒数
 * 函数声明提升
   * 函数声明会在代码执行之前就将函数声明添加到执行环境中   function a\(\){}
   * 函数表达式要在执行时才声明。   var a = function\(\){}
+
+* 函数可以作为值传递。
+* 函数内部属性
+  * arguments：类数组对象，包含传入函数的所有参数。注意arguments的一个callee的属性，指向拥有该arguments对象的函数。在递归调用中，为了避免函数名发生变化导致递归调用的函数名也需要变，可以使用arguments.callee来代替函数名。
+  * this，this引用的是函数执行的环境对象。
+* 函数属性和方法：
+  * 两个属性：length和prototype，length为函数的参数个数
 
 
 
