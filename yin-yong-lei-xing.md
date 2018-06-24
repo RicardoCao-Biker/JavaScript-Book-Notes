@@ -105,10 +105,12 @@ values.sort(compare);
   * some\(\) 有一项满足就返回true
 
   * filter\(\)   var newarr = arr.filter\(function\(item,index,array\){return item &gt; 2}\)
+
   * forEach\(\)   arr.forEach\(function\(item,index,array\){do something}\)    //没有返回值
   * map\(\)   var newarr = arr.map\(function\(item,index,array\){return item\*2}\)
 
 * 归并方法：
+
   * reduce\(\)   var sum = arr.reduce\(function\(prev,cur,index,array\){return prev + cur}\)  累加
 
 #### Date类型
@@ -135,6 +137,11 @@ var result = stop - start ; //时间差毫秒数
   * getSeconds\(\)
 
 #### Function类型
+
+* 没有重载：同名函数，后声明覆盖前声明
+* 函数声明提升
+  * 函数声明会在代码执行之前就将函数声明添加到执行环境中   function a\(\){}
+  * 函数表达式要在执行时才声明。   var a = function\(\){}
 
 
 
