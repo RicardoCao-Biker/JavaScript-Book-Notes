@@ -178,6 +178,7 @@ var result = stop - start ; //时间差毫秒数
     * indexOf\(\),接受两个参数，第二个参数为从参数值位置开始查找
     * lastIndexOf\(\)
 * * trim\(\) 创建一个字符串副本，并删除前置和后缀的所有空格。
+  * 大小写转换toLowerCase\(\) /toUpperCase
 
 
 
