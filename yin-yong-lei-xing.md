@@ -41,6 +41,7 @@ var a = [1,2,3]
 * 数组的length属性是可以设置的
 
 * 检测数组：
+
   * if\(value instanceof Array\){}该中方法在页面中有多个框架时，一个框架向另一个框架传入数组则分别对应两个构造函数。
 
 > ```
@@ -53,19 +54,23 @@ var a = [1,2,3]
 
 * * if\(Array.isArray\(value\)\){}
 * 转换方法：
+
   * toString\(\)      =&gt;  "arg1,arg2,arg3"
   * valueOf\(\)      =&gt;   \[arg1,arg2,arg3\]
   * join\(\)       =&gt;    arr.join\("\|\|"\)   =&gt;  arg1\|\|arg2\|\|arg3\|\|.....
 
 * 栈方法：
+
   * push\(\) 返回修改后的长度,注意：push的一个参数对应数组的一个值，如果push的是一个数组，则数组进入新数组成为新数组的一个值。
   * pop\(\) 返回移除的项
 
 * 队列方法：
+
   * shift\(\)取出第一项并返回   
   * unshift\(\)压入第一项
 
 * 重排序方法：
+
   * reverse\(\) 翻转数组
   * sort\(\) 接受一个比较函数作为参数,比较函数接受两个参数，第一个参数大于第二个参数返回正，小于返回负，等于返回零
 
@@ -89,16 +94,47 @@ values.sort(compare);
   * slice\(\)   基于当前数组的项**创建新数组，原数组不变。**
   * splice\(起始位置,要删除的个数,要插入的项...\) ，返回值为删除的数组
 * 位置方法：
+
   * indexOf\(\) :接受两个参数，要查找的项 和 查找起点位置。
   * lastIndexOf\(\)
 
 * 迭代方法：不修改原数组的值
+
   * every\(\) 必须每个项都满足条件才返回true
 
   * some\(\) 有一项满足就返回true
+
   * filter\(\)   var newarr = arr.filter\(function\(item,index,array\){return item &gt; 2}\)
-  * forEach\(\)   var newarr = arr.map\(function\(item,index,array\){return item\*2}\)
+  * forEach\(\)   arr.forEach\(function\(item,index,array\){do something}\)    //没有返回值
   * map\(\)   var newarr = arr.map\(function\(item,index,array\){return item\*2}\)
+
+* 归并方法：
+  * reduce\(\)   var sum = arr.reduce\(function\(prev,cur,index,array\){return prev + cur}\)  累加
+
+#### Date类型
+
+* 创建日期对象：  var now = new Date\(\);
+
+* 获取时间差
+
+```
+var start = Date.now();
+doSomething();
+var stop = Data.now();
+var result = stop - start ; //时间差毫秒数
+```
+
+* 方法：
+  * getTime\(\)  日期的毫秒数
+  * getFullYear\(\)
+  * getMonth\(\)
+  * getDate\(\)
+  * getDay\(\)  星期数
+  * getHours\(\)
+  * getMinutes\(\)
+  * getSeconds\(\)
+
+#### Function类型
 
 
 
