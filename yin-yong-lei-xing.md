@@ -153,6 +153,7 @@ var result = stop - start ; //时间差毫秒数
   * this，this引用的是函数执行的环境对象。
 
 * 函数属性和方法：
+
   * 两个属性：length和prototype，length为函数的参数个数
   * 方法：
     * apply\(\) 第一个参数为运行函数的作用域，第二个为参数数组
@@ -166,7 +167,9 @@ var result = stop - start ; //时间差毫秒数
 * 不要使用Boolean对象，因为Boolean对象在判断等情况下与基本类型的Boolean有出入，容易造成误解。
 
 * 不建议使用实例化的Number\(\) 类型
+
 * String类型的方法：
+
   * str.charAt\(index\) 用于访问指定位置的字符串/ str\[index\] 也可以同样完成功能，需要浏览器支持
 
 * * concat\(\) 返回新的字符串   var newstr = oldstr.concat\(arg1,arg2 ....\)，实践中建议使用+号进行字符串拼接
@@ -174,8 +177,9 @@ var result = stop - start ; //时间差毫秒数
 * * 字符串为位置方法：
     * indexOf\(\),接受两个参数，第二个参数为从参数值位置开始查找
     * lastIndexOf\(\)
-
 * * trim\(\) 创建一个字符串副本，并删除前置和后缀的所有空格。
+  * 大小写转换toLowerCase\(\) /toUpperCase.
+  * 
 
 
 
