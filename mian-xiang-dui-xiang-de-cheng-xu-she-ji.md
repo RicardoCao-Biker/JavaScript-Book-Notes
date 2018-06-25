@@ -3,11 +3,14 @@
 * ES5中有两种属性，数据属性和访问其属性。
 * 要修改属性默认的特性，必须使用ES5的Object.definedProperty\(\)方法
 * 数据属性
+
   * Configurable能否通过delete删除属性从而重新定义属性
   * Enumerable能否通过for-in遍历属性
 
   * Writable能否修改属性值
+
   * Value属性的数据值
+
 * 访问器属性
 
 * * Configurable
@@ -22,6 +25,8 @@
 * 原型模式：向函数的Prototype原型属性中写入属性和方法，以达到所有实例共享的目的。
   * 不能通过实例chong'xie 原型中的值，如果在实例中添加了重名属性，则只会屏蔽原实例与原型的连接，可以通过delete操作符删除实例属性，回复与原型的连接。
   * hasOwnProperty\(\)方法用来检测属性是存在于实例中还是原型中？
+
+#### 原型
 
 
 
