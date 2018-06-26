@@ -181,7 +181,7 @@ var result = stop - start ; //时间差毫秒数
   * 大小写转换toLowerCase\(\) /toUpperCase.
   * match\(\)匹配   text.match\(pattern\)    text.search\(pattern\)
   * replace\(\)方法接受两个参数，第一个参数为字符串或正则表达式，如果为字符串则只会替换第一个字符串，第二个参数可以为字符串或函数。等
-  *  split\(\),第一个参数为指定的分隔符，该方法会按照分隔符最字符串进行分隔，并依次push进数组中。
+  * split\(\),第一个参数为指定的分隔符，该方法会按照分隔符最字符串进行分隔，并依次push进数组中。
 
 #### 单体内置对象
 
@@ -194,6 +194,40 @@ var result = stop - start ; //时间差毫秒数
   * Math.floor\(\)向下舍入
   * Math.round\(\)四舍五入
   * Math.random\(\)返回0-1的随机数
+
+#### 题目：
+
+```
+function foo(){
+	this.value = 42;
+};
+console.log(foo.prototype);
+foo.prototype.rico = '123';
+console.log(foo.prototype);
+foo.prototype = {
+	method: function(){return true;}
+};
+console.log(foo.prototype);
+function bar(){
+	return{
+		ni : function(){},
+		method: function(){return value;}
+	};
+};
+foo.prototype = new bar();
+console.log(foo.prototype);
+console.log(foo.prototype instanceof bar);
+var test = new foo();
+console.log(test instanceof foo);
+console.log(test instanceof bar);
+VM1120:4 {constructor: ƒ}
+VM1120:6 {rico: "123", constructor: ƒ}
+VM1120:10 {method: ƒ}
+VM1120:18 {ni: ƒ, method: ƒ}
+VM1120:19 false
+VM1120:21 true
+VM1120:22 false
+```
 
 
 
